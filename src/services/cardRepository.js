@@ -1,34 +1,34 @@
 import { createClient } from "@supabase/supabase-js";
 import { defaultCard } from "../data/defaultCard.js";
+import { supabaseConfig } from "../config/supabase.js";
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL?.trim();
+const supabaseUrl = (import.meta.env.VITE_SUPABASE_URL || supabaseConfig.url || "").trim();
 const supabaseKey = (
   import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
+  supabaseConfig.publishableKey ||
   import.meta.env.VITE_SUPABASE_ANON_KEY ||
   ""
 ).trim();
 
-function hasSupabaseConfig() {
-  return Boolean(supabaseUrl && supabaseKey);
-}
+const supabase = supabaseUrl && supabaseKey
+  ? createClient(supabaseUrl, supabaseKey, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+        detectSessionInUrl: false
+      }
+    })
+  : null;
 
 export async function getGiftCard(slug) {
-  if (!hasSupabaseConfig()) {
+  if (!supabase) {
     return { data: defaultCard, source: "fallback" };
   }
-
-  const supabase = createClient(supabaseUrl, supabaseKey, {
-    auth: {
-      persistSession: false,
-      autoRefreshToken: false,
-      detectSessionInUrl: false
-    }
-  });
 
   const { data, error } = await supabase
     .from("gift_cards")
     .select(
-      "slug,recipient_name,title,message,destination,valid_from,valid_until,active,photos"
+      "slug,recipient_name,title,message,destination,valid_from,valid_until,active,cover_image_url,music_url,photos"
     )
     .eq("slug", slug)
     .eq("active", true)

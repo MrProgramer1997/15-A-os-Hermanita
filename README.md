@@ -1,41 +1,39 @@
 # Tarjeta de 15 anos - Brasil 2027
 
-Experiencia web animada creada con Vite, JavaScript y Supabase, pensada para GitHub Pages.
+Experiencia web animada creada con Vite, JavaScript y Supabase, preparada para GitHub Pages.
 
-## Arquitectura
+## Estado actual
 
-- `index.html`: estructura visual.
-- `src/main.js`: interacciones, animaciones y renderizado.
-- `src/styles.css`: diseno responsive y animaciones.
-- `src/data/defaultCard.js`: respaldo local si Supabase no esta configurado o falla.
-- `src/services/cardRepository.js`: unica capa que consulta Supabase.
-- `supabase/schema.sql`: tabla, RLS, permisos y contenido inicial.
+El frontend ya esta conectado al proyecto Supabase `Proyecto Quince V`.
 
-## 1. Abrir en Visual Studio Code
+- Project ref: `fretmqeznyofqakcsfyb`
+- Tarjeta: `hermanita-15-brasil`
+- Vigencia: hasta el 30 de septiembre de 2027
+- Base de datos: una sola tabla `gift_cards`
+- Seguridad: RLS activo; el navegador solo tiene SELECT sobre tarjetas activas
+
+La URL y la Publishable key estan incluidas en `src/config/supabase.js`. Esto es correcto para una aplicacion frontend: la Publishable key es publica y la seguridad real la aplican RLS y los permisos SQL. Nunca uses una secret key o `service_role` en el navegador.
+
+## Ejecutar en Visual Studio Code
 
 ```bash
 npm install
 npm run dev
 ```
 
-## 2. Configurar Supabase
+## Build de produccion
 
-1. Abre tu proyecto en Supabase.
-2. Ve a SQL Editor.
-3. Ejecuta `supabase/schema.sql`.
-4. Copia `.env.example` a `.env`.
-5. Completa tu URL y Publishable key.
-
-```env
-VITE_SUPABASE_URL=https://TU-PROYECTO.supabase.co
-VITE_SUPABASE_PUBLISHABLE_KEY=TU_PUBLISHABLE_KEY
+```bash
+npm run build
 ```
 
-Nunca pongas una secret key o `service_role` en GitHub Pages.
+La salida queda en `dist/`.
 
-## 3. Personalizar el nombre
+`vite.config.js` usa `base: "./"`, por lo que el build funciona tanto en GitHub Pages como en hosting estatico sin tener que cambiar el nombre del repositorio.
 
-En Supabase:
+## Personalizar el nombre
+
+La tarjeta sigue usando `Hermanita` como nombre temporal. Cuando tengamos el nombre real:
 
 ```sql
 update public.gift_cards
@@ -44,9 +42,9 @@ set recipient_name = 'NOMBRE_REAL',
 where slug = 'hermanita-15-brasil';
 ```
 
-## 4. Agregar fotografias
+## Fotografias
 
-El campo `photos` recibe un arreglo JSON de objetos con `url`, `alt` y `caption`.
+El campo `photos` recibe un arreglo JSON con `url`, `alt` y `caption`. Si queda vacio, la galeria no se muestra.
 
 ```sql
 update public.gift_cards
@@ -57,29 +55,24 @@ updated_at = now()
 where slug = 'hermanita-15-brasil';
 ```
 
-Si no hay fotos, la galeria no aparece y la tarjeta sigue viendose terminada.
-
-## 5. GitHub Pages
-
-En `vite.config.js`, si el repositorio se llama `Tarjeta-15-Brasil`, usa:
-
-```js
-base: "/Tarjeta-15-Brasil/"
-```
-
-Luego:
-
-```bash
-npm run build
-```
-
-La salida queda en `dist/`.
-
 ## Seguridad
 
-- RLS esta activo.
+- RLS activo.
 - `anon` y `authenticated` tienen solamente `SELECT`.
+- Solo las filas con `active = true` pueden leerse desde el frontend.
 - No se usa `SECURITY DEFINER`.
-- La tabla debe contener solamente informacion que pueda ser publica.
-- Nunca publiques `service_role`, secret keys o datos privados.
-- El slug no funciona como contrasena: quien tenga el enlace puede ver la tarjeta.
+- No hay credenciales privadas en el proyecto.
+- La Publishable key puede estar en el cliente; no equivale a una contrasena.
+- La tabla contiene solo informacion destinada a mostrarse publicamente en la tarjeta.
+
+## Publicacion automatica en GitHub Pages
+
+El proyecto ya incluye `.github/workflows/deploy-pages.yml`.
+
+1. Crea un repositorio en GitHub.
+2. Sube todo el contenido de esta carpeta a la rama `main`.
+3. En GitHub abre `Settings > Pages`.
+4. En `Build and deployment > Source`, selecciona `GitHub Actions`.
+5. Haz un nuevo push a `main` o ejecuta manualmente el workflow `Deploy GitHub Pages` desde `Actions`.
+
+GitHub instalara las dependencias, ejecutara `npm run build` y publicara la carpeta `dist` automaticamente.

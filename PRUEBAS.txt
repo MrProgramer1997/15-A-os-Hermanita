@@ -1,0 +1,35 @@
+VERIFICACION DE LA TARJETA - 25/09/2026
+
+Archivo: index.html
+SHA-256: 72691b8dd36a8ba8f9dc6c3d792129cc4bb7b859d11723ee4af463fbf7269fb4
+
+RESULTADO: 7 escenarios; 107 comprobaciones correctas.
+
+ENTORNO Y ALCANCE
+Chromium, automatizado con Playwright. El archivo HTML completo se cargo
+con page.set_content, sin transformar ni sustituir su CSS o JavaScript.
+La red del contexto del navegador estaba desactivada. Cero peticiones externas.
+No se utilizaron respuestas simuladas de Supabase: esta edicion no lo consulta.
+
+ESCENARIOS
+- PC: 1440 x 1000.
+- Celular: 390 x 844.
+- Celular estrecho: 320 x 640.
+- Tableta: 820 x 1180.
+- Horizontal: 844 x 390.
+- JavaScript desactivado: carta y regalo legibles como HTML.
+- Preferencia de movimiento reducido: sin confeti.
+
+COMPROBACIONES
+Abrir portada, visualizar mensaje completo, revelar regalo, fecha septiembre
+2027, volver a portada, repetir apertura, uso del teclado, confeti sin
+acumulacion de particulas, ausencia de desbordamiento horizontal y ausencia
+de errores JavaScript. Capturas de PC y celular revisadas visualmente.
+
+LIMITES DE LA VERIFICACION
+Las navegaciones file:// y localhost estan bloqueadas por una politica del
+navegador de este entorno. No se desactivo esa politica. Las pruebas de
+interaccion cargaron directamente el HTML con Playwright. No se probaron
+Safari ni Firefox. El workflow fue revisado y sus versiones contrastadas
+con los repositorios oficiales; no se ejecuto en la cuenta GitHub del usuario.
+No se han cambiado el repositorio remoto ni la base de datos.

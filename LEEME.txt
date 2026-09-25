@@ -1,0 +1,53 @@
+TARJETA DE LOS 15 - HERMANITA
+
+ABRIR EN TU PC
+1. Extrae este ZIP en una carpeta.
+2. Abre index.html con Chrome o Edge (doble clic, o clic derecho > Abrir con).
+3. Pulsa Abrir mi regalo y despues Descubrir mi regalo.
+
+No ejecutes los archivos .bat de entregas anteriores. No hay que instalar
+Node.js, Vite, npm ni dependencias. Puedes editar index.html con VS Code.
+El diseno, los estilos, el mensaje y las animaciones estan en ese archivo.
+
+QUE SE CONSERVA
+Portada de 15 anos, mensaje aprobado, iconos animados, carta, regalo sorpresa,
+ruta Colombia-Brasil, pasaporte, confeti y vigencia septiembre de 2027.
+Hay botones para repetir el confeti y volver a la portada.
+
+SUPABASE
+Esta edicion es independiente: no consulta Supabase y no contiene claves.
+No borra ni modifica tu proyecto existente ni la informacion guardada.
+Para cambiar el texto se edita el HTML; no se sincroniza con la base de datos.
+No se han incorporado fotos ni musica, ya que no se recibieron esos archivos.
+El mensaje es personal. Un sitio publicado en GitHub Pages puede ser publico;
+noindex no es proteccion de acceso ni una contrasena.
+
+PUBLICAR EN EL REPOSITORIO EXISTENTE
+Copia el contenido de este ZIP en la raiz de 15-A-os-Hermanita, reemplazando
+index.html y .github/workflows/deploy-pages.yml. Conserva la carpeta .git.
+No borres las carpetas anteriores: el nuevo workflow no usa src, dist ni npm.
+
+Desde la terminal de VS Code en la carpeta del repositorio:
+
+git add index.html .nojekyll .github/workflows/deploy-pages.yml
+git commit -m "Publicar tarjeta HTML independiente"
+git push
+
+Este commit solo incluye esos tres archivos; no fuerza el push ni elimina
+archivos. Si ya habia otros cambios preparados, revisalos antes del commit.
+
+En Settings > Pages, Source debe estar en GitHub Actions. El workflow
+publica exclusivamente index.html, sin compilar. No publica pruebas ni fotos
+del informe. Si Pages ya estaba en GitHub Actions, no cambies esa opcion.
+
+PRUEBAS
+Consulta PRUEBAS.txt. El resultado detallado esta en pruebas/resultados.json.
+El script pruebas/probar.py es opcional y solo sirve para desarrolladores;
+no necesitas ejecutarlo para ver la tarjeta.
+
+REFERENCIAS TECNICAS DEL WORKFLOW (consultadas 25/09/2026)
+https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+https://github.com/actions/checkout/releases/tag/v7.0.1
+https://github.com/actions/configure-pages/releases/tag/v6.0.0
+https://github.com/actions/upload-pages-artifact/releases/tag/v5.0.0
+https://github.com/actions/deploy-pages/releases/tag/v5.0.1

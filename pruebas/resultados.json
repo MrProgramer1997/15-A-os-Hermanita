@@ -1,0 +1,486 @@
+[
+  {
+    "escenario": "pc-sin-internet",
+    "correcto": true,
+    "comprobaciones": [
+      {
+        "prueba": "Sin desbordamiento horizontal en portada",
+        "correcta": true
+      },
+      {
+        "prueba": "Portada visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Carta oculta hasta abrir",
+        "correcta": true
+      },
+      {
+        "prueba": "Boton abrir muestra carta",
+        "correcta": true
+      },
+      {
+        "prueba": "Mensaje completo disponible inmediatamente",
+        "correcta": true
+      },
+      {
+        "prueba": "Viaje oculto antes de revelar",
+        "correcta": true
+      },
+      {
+        "prueba": "Regalo visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Cierre visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Fecha correcta",
+        "correcta": true
+      },
+      {
+        "prueba": "No desbordamiento horizontal con regalo",
+        "correcta": true
+      },
+      {
+        "prueba": "Boton indica estado abierto",
+        "correcta": true
+      },
+      {
+        "prueba": "Confeti respeta movimiento reducido",
+        "correcta": true
+      },
+      {
+        "prueba": "Confeti no se acumula con clics repetidos",
+        "correcta": true
+      },
+      {
+        "prueba": "Volver a portada funciona",
+        "correcta": true
+      },
+      {
+        "prueba": "Apertura y regalo con teclado",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin solicitudes a servicios externos",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin errores de JavaScript",
+        "correcta": true
+      }
+    ],
+    "errores": [],
+    "peticiones_externas": []
+  },
+  {
+    "escenario": "movil-sin-internet",
+    "correcto": true,
+    "comprobaciones": [
+      {
+        "prueba": "Sin desbordamiento horizontal en portada",
+        "correcta": true
+      },
+      {
+        "prueba": "Portada visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Carta oculta hasta abrir",
+        "correcta": true
+      },
+      {
+        "prueba": "Boton abrir muestra carta",
+        "correcta": true
+      },
+      {
+        "prueba": "Mensaje completo disponible inmediatamente",
+        "correcta": true
+      },
+      {
+        "prueba": "Viaje oculto antes de revelar",
+        "correcta": true
+      },
+      {
+        "prueba": "Regalo visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Cierre visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Fecha correcta",
+        "correcta": true
+      },
+      {
+        "prueba": "No desbordamiento horizontal con regalo",
+        "correcta": true
+      },
+      {
+        "prueba": "Boton indica estado abierto",
+        "correcta": true
+      },
+      {
+        "prueba": "Confeti respeta movimiento reducido",
+        "correcta": true
+      },
+      {
+        "prueba": "Confeti no se acumula con clics repetidos",
+        "correcta": true
+      },
+      {
+        "prueba": "Volver a portada funciona",
+        "correcta": true
+      },
+      {
+        "prueba": "Apertura y regalo con teclado",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin solicitudes a servicios externos",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin errores de JavaScript",
+        "correcta": true
+      }
+    ],
+    "errores": [],
+    "peticiones_externas": []
+  },
+  {
+    "escenario": "movil-320",
+    "correcto": true,
+    "comprobaciones": [
+      {
+        "prueba": "Sin desbordamiento horizontal en portada",
+        "correcta": true
+      },
+      {
+        "prueba": "Portada visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Carta oculta hasta abrir",
+        "correcta": true
+      },
+      {
+        "prueba": "Boton abrir muestra carta",
+        "correcta": true
+      },
+      {
+        "prueba": "Mensaje completo disponible inmediatamente",
+        "correcta": true
+      },
+      {
+        "prueba": "Viaje oculto antes de revelar",
+        "correcta": true
+      },
+      {
+        "prueba": "Regalo visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Cierre visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Fecha correcta",
+        "correcta": true
+      },
+      {
+        "prueba": "No desbordamiento horizontal con regalo",
+        "correcta": true
+      },
+      {
+        "prueba": "Boton indica estado abierto",
+        "correcta": true
+      },
+      {
+        "prueba": "Confeti respeta movimiento reducido",
+        "correcta": true
+      },
+      {
+        "prueba": "Confeti no se acumula con clics repetidos",
+        "correcta": true
+      },
+      {
+        "prueba": "Volver a portada funciona",
+        "correcta": true
+      },
+      {
+        "prueba": "Apertura y regalo con teclado",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin solicitudes a servicios externos",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin errores de JavaScript",
+        "correcta": true
+      }
+    ],
+    "errores": [],
+    "peticiones_externas": []
+  },
+  {
+    "escenario": "tableta",
+    "correcto": true,
+    "comprobaciones": [
+      {
+        "prueba": "Sin desbordamiento horizontal en portada",
+        "correcta": true
+      },
+      {
+        "prueba": "Portada visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Carta oculta hasta abrir",
+        "correcta": true
+      },
+      {
+        "prueba": "Boton abrir muestra carta",
+        "correcta": true
+      },
+      {
+        "prueba": "Mensaje completo disponible inmediatamente",
+        "correcta": true
+      },
+      {
+        "prueba": "Viaje oculto antes de revelar",
+        "correcta": true
+      },
+      {
+        "prueba": "Regalo visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Cierre visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Fecha correcta",
+        "correcta": true
+      },
+      {
+        "prueba": "No desbordamiento horizontal con regalo",
+        "correcta": true
+      },
+      {
+        "prueba": "Boton indica estado abierto",
+        "correcta": true
+      },
+      {
+        "prueba": "Confeti respeta movimiento reducido",
+        "correcta": true
+      },
+      {
+        "prueba": "Confeti no se acumula con clics repetidos",
+        "correcta": true
+      },
+      {
+        "prueba": "Volver a portada funciona",
+        "correcta": true
+      },
+      {
+        "prueba": "Apertura y regalo con teclado",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin solicitudes a servicios externos",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin errores de JavaScript",
+        "correcta": true
+      }
+    ],
+    "errores": [],
+    "peticiones_externas": []
+  },
+  {
+    "escenario": "horizontal",
+    "correcto": true,
+    "comprobaciones": [
+      {
+        "prueba": "Sin desbordamiento horizontal en portada",
+        "correcta": true
+      },
+      {
+        "prueba": "Portada visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Carta oculta hasta abrir",
+        "correcta": true
+      },
+      {
+        "prueba": "Boton abrir muestra carta",
+        "correcta": true
+      },
+      {
+        "prueba": "Mensaje completo disponible inmediatamente",
+        "correcta": true
+      },
+      {
+        "prueba": "Viaje oculto antes de revelar",
+        "correcta": true
+      },
+      {
+        "prueba": "Regalo visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Cierre visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Fecha correcta",
+        "correcta": true
+      },
+      {
+        "prueba": "No desbordamiento horizontal con regalo",
+        "correcta": true
+      },
+      {
+        "prueba": "Boton indica estado abierto",
+        "correcta": true
+      },
+      {
+        "prueba": "Confeti respeta movimiento reducido",
+        "correcta": true
+      },
+      {
+        "prueba": "Confeti no se acumula con clics repetidos",
+        "correcta": true
+      },
+      {
+        "prueba": "Volver a portada funciona",
+        "correcta": true
+      },
+      {
+        "prueba": "Apertura y regalo con teclado",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin solicitudes a servicios externos",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin errores de JavaScript",
+        "correcta": true
+      }
+    ],
+    "errores": [],
+    "peticiones_externas": []
+  },
+  {
+    "escenario": "sin-javascript",
+    "correcto": true,
+    "comprobaciones": [
+      {
+        "prueba": "Sin desbordamiento horizontal en portada",
+        "correcta": true
+      },
+      {
+        "prueba": "Mensaje legible sin JavaScript",
+        "correcta": true
+      },
+      {
+        "prueba": "Regalo legible sin JavaScript",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin solicitudes a servicios externos",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin errores de JavaScript",
+        "correcta": true
+      }
+    ],
+    "errores": [],
+    "peticiones_externas": []
+  },
+  {
+    "escenario": "movimiento-reducido",
+    "correcto": true,
+    "comprobaciones": [
+      {
+        "prueba": "Sin desbordamiento horizontal en portada",
+        "correcta": true
+      },
+      {
+        "prueba": "Portada visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Carta oculta hasta abrir",
+        "correcta": true
+      },
+      {
+        "prueba": "Boton abrir muestra carta",
+        "correcta": true
+      },
+      {
+        "prueba": "Mensaje completo disponible inmediatamente",
+        "correcta": true
+      },
+      {
+        "prueba": "Viaje oculto antes de revelar",
+        "correcta": true
+      },
+      {
+        "prueba": "Regalo visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Cierre visible",
+        "correcta": true
+      },
+      {
+        "prueba": "Fecha correcta",
+        "correcta": true
+      },
+      {
+        "prueba": "No desbordamiento horizontal con regalo",
+        "correcta": true
+      },
+      {
+        "prueba": "Boton indica estado abierto",
+        "correcta": true
+      },
+      {
+        "prueba": "Confeti respeta movimiento reducido",
+        "correcta": true
+      },
+      {
+        "prueba": "Confeti no se acumula con clics repetidos",
+        "correcta": true
+      },
+      {
+        "prueba": "Volver a portada funciona",
+        "correcta": true
+      },
+      {
+        "prueba": "Apertura y regalo con teclado",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin solicitudes a servicios externos",
+        "correcta": true
+      },
+      {
+        "prueba": "Sin errores de JavaScript",
+        "correcta": true
+      }
+    ],
+    "errores": [],
+    "peticiones_externas": []
+  }
+]

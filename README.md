@@ -1,78 +1,49 @@
-# Tarjeta de 15 anos - Brasil 2027
+# 15 Años Hermanita · Brasil 2027
 
-Experiencia web animada creada con Vite, JavaScript y Supabase, preparada para GitHub Pages.
+Tarjeta web animada construida con Vite + JavaScript + Supabase y desplegada automáticamente en GitHub Pages.
 
-## Estado actual
+## Stack
 
-El frontend ya esta conectado al proyecto Supabase `Proyecto Quince V`.
+- Vite
+- JavaScript ES Modules
+- Supabase
+- GitHub Pages
+- GitHub Actions
 
-- Project ref: `fretmqeznyofqakcsfyb`
-- Tarjeta: `hermanita-15-brasil`
-- Vigencia: hasta el 30 de septiembre de 2027
-- Base de datos: una sola tabla `gift_cards`
-- Seguridad: RLS activo; el navegador solo tiene SELECT sobre tarjetas activas
+## Proyecto Supabase
 
-La URL y la Publishable key estan incluidas en `src/config/supabase.js`. Esto es correcto para una aplicacion frontend: la Publishable key es publica y la seguridad real la aplican RLS y los permisos SQL. Nunca uses una secret key o `service_role` en el navegador.
+Proyecto: `Proyecto Quince V`
 
-## Ejecutar en Visual Studio Code
+La aplicación usa la Publishable Key del proyecto en el frontend. No usa `service_role` ni claves secretas.
+La tabla `gift_cards` tiene RLS habilitado y acceso público únicamente de lectura para tarjetas activas.
+
+## Desarrollo local
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-## Build de produccion
+## Validar build antes de publicar
 
 ```bash
 npm run build
 ```
 
-La salida queda en `dist/`.
+El resultado se genera en `dist/`.
 
-`vite.config.js` usa `base: "./"`, por lo que el build funciona tanto en GitHub Pages como en hosting estatico sin tener que cambiar el nombre del repositorio.
+## GitHub Pages
 
-## Personalizar el nombre
+Repositorio esperado:
 
-La tarjeta sigue usando `Hermanita` como nombre temporal. Cuando tengamos el nombre real:
+`MrProgramer1997/15-A-os-Hermanita`
 
-```sql
-update public.gift_cards
-set recipient_name = 'NOMBRE_REAL',
-    updated_at = now()
-where slug = 'hermanita-15-brasil';
-```
+URL pública:
 
-## Fotografias
+`https://mrprogramer1997.github.io/15-A-os-Hermanita/`
 
-El campo `photos` recibe un arreglo JSON con `url`, `alt` y `caption`. Si queda vacio, la galeria no se muestra.
+El archivo `.github/workflows/deploy-pages.yml` hace el build y deploy automáticamente cuando hay un push a `main`.
 
-```sql
-update public.gift_cards
-set photos = '[
-  {"url":"URL_FOTO_1","alt":"Descripcion de la foto","caption":"Nuestro recuerdo"}
-]'::jsonb,
-updated_at = now()
-where slug = 'hermanita-15-brasil';
-```
+En GitHub debe estar configurado:
 
-## Seguridad
-
-- RLS activo.
-- `anon` y `authenticated` tienen solamente `SELECT`.
-- Solo las filas con `active = true` pueden leerse desde el frontend.
-- No se usa `SECURITY DEFINER`.
-- No hay credenciales privadas en el proyecto.
-- La Publishable key puede estar en el cliente; no equivale a una contrasena.
-- La tabla contiene solo informacion destinada a mostrarse publicamente en la tarjeta.
-
-## Publicacion automatica en GitHub Pages
-
-El proyecto ya incluye `.github/workflows/deploy-pages.yml`.
-
-1. Crea un repositorio en GitHub.
-2. Sube todo el contenido de esta carpeta a la rama `main`.
-3. En GitHub abre `Settings > Pages`.
-4. En `Build and deployment > Source`, selecciona `GitHub Actions`.
-5. Haz un nuevo push a `main` o ejecuta manualmente el workflow `Deploy GitHub Pages` desde `Actions`.
-
-GitHub instalara las dependencias, ejecutara `npm run build` y publicara la carpeta `dist` automaticamente.
+`Settings > Pages > Source: GitHub Actions`

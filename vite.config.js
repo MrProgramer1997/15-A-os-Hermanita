@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  // Base relativa: funciona localmente y evita tener que conocer de antemano
-  // el nombre final del repositorio de GitHub Pages.
-  base: "./"
+  // GitHub Pages publica este proyecto bajo:
+  // https://mrprogramer1997.github.io/15-A-os-Hermanita/
+  base: "/15-A-os-Hermanita/"
 });

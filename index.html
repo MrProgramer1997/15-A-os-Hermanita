@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Una tarjeta de 15 años, una promesa y un viaje a Brasil."
+    />
+    <meta name="theme-color" content="#0a071b" />
+    <title>15 años · Una promesa para ti</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="intro" class="intro" aria-labelledby="intro-title">
+        <div class="intro-stars" aria-hidden="true"></div>
+        <div class="gift-seal" aria-hidden="true">
+          <span>15</span>
+          <small>años</small>
+        </div>
+        <p class="intro-overline">TENGO ALGO PARA TI</p>
+        <h1 id="intro-title">Feliz cumpleaños, <span id="intro-name">hermanita</span></h1>
+        <p class="intro-subtitle">Esta no es solamente una tarjeta. Guarda una promesa.</p>
+        <button id="open-experience" class="button button-primary" type="button">
+          Abrir mi regalo
+          <span aria-hidden="true">✦</span>
+        </button>
+        <p class="intro-hint">Hazlo cuando quieras descubrirlo.</p>
+      </div>
+
+      <main id="experience" class="experience is-hidden">
+        <div id="floating-icons" class="floating-icons" aria-hidden="true"></div>
+        <div class="ambient ambient-left" aria-hidden="true"></div>
+        <div class="ambient ambient-right" aria-hidden="true"></div>
+
+        <header class="hero section-shell reveal-on-scroll">
+          <nav class="mini-nav" aria-label="Tarjeta de cumpleaños">
+            <span>15 · 2026</span>
+            <span class="mini-nav-dot">♥</span>
+            <span>Brasil · 2027</span>
+          </nav>
+
+          <div class="hero-content">
+            <p class="eyebrow">PARA MI HERMANITA</p>
+            <div class="age-orbit" aria-hidden="true">
+              <span class="orbit orbit-one"></span>
+              <span class="orbit orbit-two"></span>
+              <strong>15</strong>
+            </div>
+            <h2>Hoy celebramos tu historia.<br /><span>Y lo que viene después.</span></h2>
+            <p>
+              Hay personas que forman parte de nuestros recuerdos y otras que también forman parte
+              de todos nuestros planes. Tú eres ambas.
+            </p>
+            <a class="scroll-cue" href="#carta">Leer mi mensaje <span aria-hidden="true">↓</span></a>
+          </div>
+        </header>
+
+        <section id="carta" class="section-shell letter-section reveal-on-scroll">
+          <div class="section-title">
+            <p class="eyebrow">ANTES DEL REGALO</p>
+            <h2>Quiero que nunca olvides esto</h2>
+          </div>
+
+          <article class="letter-card">
+            <div class="letter-topline">
+              <span>Para: <strong id="letter-name">Hermanita</strong></span>
+              <span>De: tu hermano</span>
+            </div>
+            <div id="birthday-message" class="letter-copy"></div>
+            <div class="letter-signature">
+              <span>Siempre contigo,</span>
+              <strong>tu hermano ♥</strong>
+            </div>
+          </article>
+        </section>
+
+        <section class="section-shell promise-section reveal-on-scroll">
+          <div class="promise-copy">
+            <p class="eyebrow">UNA PROMESA</p>
+            <h2>Hay un regalo que no cabe en una caja.</h2>
+            <p>
+              Quiero que sea una experiencia, un recuerdo y uno de esos momentos que podamos contar
+              durante muchos años.
+            </p>
+          </div>
+
+          <button id="reveal-trip" class="trip-lock" type="button" aria-expanded="false">
+            <span class="trip-lock-icon" aria-hidden="true">✈</span>
+            <span>
+              <strong>Descubrir mi regalo</strong>
+              <small>Destino bloqueado · toca para revelar</small>
+            </span>
+            <span class="trip-lock-arrow" aria-hidden="true">→</span>
+          </button>
+        </section>
+
+        <section id="trip-section" class="section-shell trip-section is-hidden" aria-live="polite">
+          <div class="brazil-banner reveal-on-scroll">
+            <div class="brazil-copy">
+              <p class="eyebrow">DESTINO DESBLOQUEADO</p>
+              <h2 id="destination-title">Brasil</h2>
+              <p>El próximo año quiero que hagamos realidad esta promesa juntos.</p>
+            </div>
+            <div class="brazil-emblem" aria-hidden="true">
+              <span>BR</span>
+            </div>
+          </div>
+
+          <article class="passport reveal-on-scroll" aria-label="Voucher de viaje">
+            <div class="passport-cover">
+              <div class="passport-cover-top">
+                <span>VIAGEM ESPECIAL</span>
+                <span aria-hidden="true">✦</span>
+              </div>
+              <div class="passport-mark" aria-hidden="true">✈</div>
+              <div>
+                <small>PASSAPORTE DE UMA PROMESSA</small>
+                <strong>BRASIL</strong>
+              </div>
+            </div>
+
+            <div class="passport-page">
+              <div class="ticket-header">
+                <span class="ticket-brand">BOARDING PROMISE</span>
+                <span id="validity-badge" class="status-badge">Promesa activa</span>
+              </div>
+
+              <div class="route" aria-hidden="true">
+                <div class="route-city">
+                  <strong>COL</strong>
+                  <small>Colombia</small>
+                </div>
+                <div class="route-track">
+                  <span class="plane">✈</span>
+                </div>
+                <div class="route-city route-city-right">
+                  <strong>BRA</strong>
+                  <small>Brasil</small>
+                </div>
+              </div>
+
+              <div class="ticket-data">
+                <div>
+                  <span>Pasajera</span>
+                  <strong id="ticket-name">Hermanita</strong>
+                </div>
+                <div>
+                  <span>Motivo</span>
+                  <strong>Mis 15 años</strong>
+                </div>
+                <div>
+                  <span>Destino</span>
+                  <strong id="ticket-destination">Brasil</strong>
+                </div>
+                <div>
+                  <span>Válido hasta</span>
+                  <strong id="ticket-valid-until">Septiembre 2027</strong>
+                </div>
+              </div>
+
+              <div class="ticket-note">
+                <span aria-hidden="true">♥</span>
+                <p>
+                  Este voucher no representa solamente un viaje. Representa tiempo juntos,
+                  recuerdos nuevos y una promesa que quiero cumplir contigo.
+                </p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section id="gallery-section" class="section-shell gallery-section is-hidden reveal-on-scroll">
+          <div class="section-title">
+            <p class="eyebrow">NUESTROS RECUERDOS</p>
+            <h2>Un poquito de nuestra historia</h2>
+          </div>
+          <div id="photo-grid" class="photo-grid"></div>
+        </section>
+
+        <section class="section-shell final-section reveal-on-scroll">
+          <div class="final-icons" aria-hidden="true">
+            <span>✦</span><span>♥</span><span>✈</span><span>★</span>
+          </div>
+          <h2>Que los 15 sean apenas el comienzo.</h2>
+          <p>
+            Sigue creciendo, soñando y disfrutando tu vida. Yo voy a seguir haciendo todo lo que
+            pueda por acompañarte en el camino.
+          </p>
+          <strong>Brasil nos espera. 🇧🇷</strong>
+        </section>
+
+        <footer class="footer section-shell">
+          <span>Hecho especialmente para tus 15 años.</span>
+          <span id="data-source" class="data-source" aria-hidden="true"></span>
+        </footer>
+      </main>
+
+      <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
